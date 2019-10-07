@@ -9,6 +9,10 @@ The dataset we are using for toxic comment classification is taken from Kaggle c
 
 
 Data Preprocessing:
-1. Random sampling from data: due to the huge number of instances in dataset, a random sample of data containing 10000 instances are selected for data exploration and analysis. 2. Handling missing data: no missing value. 3. Encoding: not required because all features are numeric. 4. Dropping unnecessary feature: two columns including the id and the data type (either test or training) are removed. Moreover, Toxicity is the summation of the other toxic comments targets, so it is removed. 5. Scaling: not required since the data are almost in the same range of values. 6. Text Analysis: for the test analysis we need to follow the steps as follows, a. Lowerization: all texts are already in lower case and this step is not required, b.Tokenization: all texts have been tokenized using “nltk” package been installed, the output is an RDD format c. Stop word removal: the stop words are removed from the RDD of tokenized words using “nltk” package, d. Punctuation removal: the punctuation characters are removed from the words,
-e. Lemmatization is done to get the data ready for the TF-IDF, finally TF-IDF is used to convert the results words to the numbers for being used by the
+1. Random sampling from data: due to the huge number of instances in dataset, a random sample of data containing 10000 instances are selected for data exploration and analysis. 
+2. Handling missing data: no missing value. 
+3. Encoding: not required because all features are numeric. 
+4. Dropping unnecessary feature: two columns including the id and the data type (either test or training) are removed. Moreover, Toxicity is the summation of the other toxic comments targets, so it is removed. 
+5. Scaling: not required since the data are almost in the same range of values. 
+6. Text Analysis: for the test analysis we need to follow the steps as follows, a. Lowerization: all texts are already in lower case and this step is not required, b.Tokenization: all texts have been tokenized using “nltk” package been installed, the output is an RDD format c. Stop word removal: the stop words are removed from the RDD of tokenized words using “nltk” package, d. Punctuation removal: the punctuation characters are removed from the words, e. Lemmatization is done to get the data ready for the TF-IDF, finally TF-IDF is used to convert the results words to the numbers for being used by the
 
